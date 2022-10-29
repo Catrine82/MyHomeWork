@@ -31,19 +31,21 @@ Console.Write("Input N: ");
 int n = Convert.ToInt32(Console.ReadLine());
 Console.Write($"M = {m}, N = {n} -> {Nat(m,n)}");
 */
-/*
-// НЕ СМОГЛА  МОЖНО ЕЩЕ ВЕРЕМЕНИ?? Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+
+// Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
 double Nat(double m, double n)
 {
-    if (m == 0) return n+1; else
-    if (m==1) return n+2; else
-    if (m=2) return 2*n+3;
-    else return 
+    if (m < 2) return n + m + 1;
+    else
+    if (m == 2) return 2*n + 3;
+    else
+    if (m == 3) return Math.Pow(2,n+3)-3;
+    return Math.Pow(2,Nat(m-1,n)+3)-3;   
     
 }
+
 Console.Write("Input M: ");
 double m = Convert.ToDouble(Console.ReadLine());
 Console.Write("Input N: ");
 double n = Convert.ToDouble(Console.ReadLine());
 Console.Write($"M = {m}, N = {n} -> {Nat(m,n)}");
-*/
